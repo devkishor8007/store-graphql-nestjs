@@ -1,0 +1,32 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Store {
+  id: Int!
+  title: String!
+  price: Int!
+}
+
+type Query {
+  index: String!
+  store: [Store!]!
+  storeId(id: Int!): Store!
+}
+
+type Mutation {
+  createStore(addStoreArgs: AddStoreArgs!): String!
+  updateStore(updateStoreArgs: UpdateStoreArgs!): String!
+  deleteStore(id: Int!): String!
+}
+
+input AddStoreArgs {
+  title: String!
+  price: Int!
+}
+
+input UpdateStoreArgs {
+  id: Float
+  title: String
+  price: Int!
+}
